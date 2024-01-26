@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 80%;
+}
+
+.collection {
+    flex: 0 0 170px;
+    border: 2px solid grey;
+    border-radius: 5px;
+    padding: 20px 10px;
+    height: 200px;
+}
+
+.collection-title {
+    font-size: 14px;
+    font-weight: 700;
+}
