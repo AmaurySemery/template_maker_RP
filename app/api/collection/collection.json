@@ -2,8 +2,8 @@
     {
         "id": "1",
         "title": "Mon titre 1",
-        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "message": "message2"
+        "body": "<linkhref=|&https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre&display=swap|&rel=|&stylesheet|&><divstyle=|&position:relative;left:50%;transform:translateX(-50%);width:600px;height:auto;background-color:#164a55;border-radius:20px20%20px20px;;border:2pxsolid#05242b;overflow:hidden;|&><ahref=|&https://fallendrakes.forumactif.com/t108-l-amour-empoisonne-d-une-mere-reste-telle-une-bouteille-perdue-dans-la-mer|&><divstyle=|&position:relative;top:0;width:100%;height:200px;background-image:url('https://i.servimg.com/u/f88/18/85/03/67/baoyu_18.png');object-fit:cover;border-bottom:2pxsolid#05242b;border-top:2pxsolid#05242b;|&></div></a><divstyle=|&position:relative;top:0;width:auto;height:auto;margin:25px;background:linear-gradient(#4fab9d,#c89e63);border:2pxsolid#05242b;border-radius:0px0px20px20px;overflow:hidden;|&><divstyle=|&font-size:18px;margin-top:20px;margin-left:20px;margin-right:20px;color:#021718;font-family:'FrankRuhlLibre';|&>{body}</div></div></div>",
+        "message": "<div style=|&font-size: 18px; font-weight: bold; margin-left: 40px; margin-right: 40px; color: #741313; font-family: 'Frank Ruhl Libre';|&></div>"
     },
     {
         "id": "2",
