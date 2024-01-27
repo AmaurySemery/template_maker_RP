@@ -5,7 +5,7 @@ export default function Template({ data }) {
   // console.log(data)
   return (
     <div className={styles.collection} key={id}>
-      <div>{title}</div>
+      <div className={styles["collection-title"]}>{title}</div>
       <div>{body}</div>
       <div>{message}</div>
     </div>
