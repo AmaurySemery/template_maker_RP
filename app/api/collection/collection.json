@@ -1,21 +1,25 @@
 [
     {
         "id": "1",
+        "title": "Mon titre 1",
         "body": "Premier template",
         "message": "message2"
     },
     {
         "id": "2",
+        "title": "Mon titre 2",
         "body": "Deuxième template",
         "message": "message3"
     },
     {
         "id": "3",
+        "title": "Mon titre 3",
         "body": "Troisième template",
         "message": "message4"
     },
     {
         "id": "4",
+        "title": "Mon titre 4",
         "body": "Quatrième template",
         "message": "message5"
     }

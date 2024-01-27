@@ -7,9 +7,10 @@ export async function GET(request) {
 }
 
 export async function POST(request) {
-    const { body, message } = await request.json();
+    const { title, body, message } = await request.json();
     const template = {
       id: Date.now().toString(),
+      title,
       body,
       message,
     };

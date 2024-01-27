@@ -35,7 +35,7 @@ export default function Form({ formTitle, addTemplate }) {
           cols="80"
           rows="15"
           value={templateBody}
-          onInput={(e) => setTemplateMessage(e.target.value)}
+          onInput={(e) => setTemplateBody(e.target.value)}
         ></textarea>
 
         <label htmlFor="message">Message du template</label>
