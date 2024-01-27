@@ -2,9 +2,9 @@ import Template from '../components/Template';
 import styles from './collection.module.css';
 
 async function fetchCollection() {
-    const res = await fetch(`http://localhost:3000/api/collection`);
+    const res = await fetch(`http://localhost:3000/api/collections`);
     const collection = await res.json();
-    console.log(collection);
+    //console.log(collection);
   
     return collection;
   }

@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server";
-import collection from './collection.json'
+import collection from './collections.json'
 
 export async function GET(request) {
-    console.log({url: request.url, request});
-    return NextResponse.json(collection);
+  console.log({url: request.url, request});
+  return NextResponse.json(collection);
 }
 
 export async function POST(request) {
