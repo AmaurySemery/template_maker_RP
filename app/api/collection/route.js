@@ -7,15 +7,19 @@ export async function GET(request) {
 }
 
 export async function POST(request) {
-    const { title, body, message } = await request.json();
+    let { title, body, message } = await request.json();
+
+    body = body.replace(/"/g,'|&');
+
     const template = {
       id: Date.now().toString(),
       title,
       body,
       message,
     };
-  
+
     collection.push(template);
-    console.log({ templateFromServer: template });
+    console.log({ templateFromServer: body });
+
     return NextResponse.json({ template, status: 201 });
   }

@@ -43,7 +43,7 @@ export default function Form({ formTitle, addTemplate }) {
           cols="60"
           rows="15"
           value={templateBody}
-          onInput={(e) => setTemplateBody(e.target.value)}
+          onInput={(e) => setTemplateBody(e.target.value.replace(/[\r\n\s]/g, ''))}
         ></textarea>
 
         <label htmlFor="message">Message du template</label>
