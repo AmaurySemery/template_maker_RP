@@ -1,8 +1,13 @@
+import Form from "../components/NewTemplateForm";
+
 export default function NewTemplate() {
+    async function addTemplate(body, message) {
+        "use server";
+        console.log({ title, description });
+      }
     return (
         <main className="main">
-            <h3>Nouveau template</h3>
-            <p>Enregistrez dans votre collection un template de votre création et choisissez si vous souhaitez le rendre public ou privé !</p>
+            <Form formTitle="Création d'un nouveau template" addTemplate={addTemplate} />
         </main>
-    )
+    );
 }
