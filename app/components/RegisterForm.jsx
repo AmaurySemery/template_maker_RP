@@ -17,39 +17,34 @@ async function registerUser(data) {
   return response;
 }
 
-const RegisterForm = () => {
+export default function RegisterForm() {
   const [email, setEmail] = useState("");
-  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirm, setConfirm] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [hasError, setHasError] = useState(false);
   const [message, setMessage] = useState("");
 
-  const handleSubmit = async (e) => {
+  async function handleSubmit(e) {
     e.preventDefault();
-
+    // const response = await registerUser({email, password, task: 'register'})
     if (email === "" || password === "" || confirm === "") {
       setMessage("Please Fill All Fields");
       setHasError(true);
       return;
     }
-
     if (password !== confirm) {
       setMessage("Password and Confirm Password are different");
       setHasError(true);
       return;
     }
-
     setMessage("");
     setHasError(false);
-
-    const response = await registerUser({ email, password });
+    const response = await registerUser({ email, password, task: "register" });
     const responseJson = await response.json();
-
+    console.log({ responseFromForm: responseJson });
     if (responseJson.status === 200) {
       setEmail("");
-      setUsername("");
       setPassword("");
       setConfirm("");
       setMessage(responseJson.message);
@@ -60,11 +55,11 @@ const RegisterForm = () => {
       setHasError(true);
       setMessage(responseJson.message);
     }
-  };
+  }
 
-  const toggleShow = () => {
+  function toggleShow() {
     setShowPassword((current) => !current);
-  };
+  }
 
   return (
     <>
@@ -75,14 +70,7 @@ const RegisterForm = () => {
             type="text"
             id="email"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <label htmlFor="username">Username</label>
-          <input
-            type="text"
-            id="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            onInput={(e) => setEmail(e.target.value)}
           />
           <label htmlFor="password">Password</label>
           <div className="pass-eye">
@@ -90,13 +78,10 @@ const RegisterForm = () => {
               type={showPassword ? "text" : "password"}
               id="password"
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              onInput={(e) => setPassword(e.target.value)}
             />{" "}
-            {showPassword ? (
-              <FaEyeSlash onClick={toggleShow} />
-            ) : (
-              <FaEye onClick={toggleShow} />
-            )}
+            {showPassword && <FaEyeSlash onClick={toggleShow} />}
+            {!showPassword && <FaEye onClick={toggleShow} />}
           </div>
           <label htmlFor="confirm">Confirm Password</label>
           <div className="pass-eye">
@@ -104,13 +89,10 @@ const RegisterForm = () => {
               type={showPassword ? "text" : "password"}
               id="confirm"
               value={confirm}
-              onChange={(e) => setConfirm(e.target.value)}
+              onInput={(e) => setConfirm(e.target.value)}
             />{" "}
-            {showPassword ? (
-              <FaEyeSlash onClick={toggleShow} />
-            ) : (
-              <FaEye onClick={toggleShow} />
-            )}
+            {showPassword && <FaEyeSlash onClick={toggleShow} />}
+            {!showPassword && <FaEye onClick={toggleShow} />}
           </div>
           <input type="submit" value="Create" className="btn" />
         </form>
@@ -119,6 +101,4 @@ const RegisterForm = () => {
       {message && <div className={hasError ? "error" : "ok"}>{message}</div>}
     </>
   );
-};
-
-export default RegisterForm;
+}
