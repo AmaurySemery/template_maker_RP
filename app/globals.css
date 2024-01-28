@@ -165,3 +165,21 @@ a {
     color-scheme: dark;
   }
 }
+
+.pass-eye {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.pass-eye svg {
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+}
+
+.ok {
+  color: green;
+}
