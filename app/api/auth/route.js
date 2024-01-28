@@ -6,12 +6,13 @@ import {
   import { auth } from "./firebase-config";
   
   export async function POST(request) {
-    const { email, password, task } = await request.json();
+    const { email, username, password, task } = await request.json();
     if (task === "register") {
       try {
         const credentials = await createUserWithEmailAndPassword(
           auth,
           email,
+          username,
           password
         );
   
@@ -48,7 +49,7 @@ import {
       try {
         const credentials = await signInWithEmailAndPassword(
           auth,
-          email,
+          username,
           password
         );
         console.log({ loginResponse: credentials });
@@ -56,7 +57,7 @@ import {
         // Login success
         return NextResponse.json({
           status: 200,
-          message: `Welcome back ${email}`,
+          message: `Welcome back ${username}`,
           email,
           uid: credentials.user.uid,
           jwt: credentials.user.accessToken,

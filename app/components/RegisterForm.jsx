@@ -5,7 +5,7 @@ import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 async function registerUser(data) {
-  const URL = "/api/register"; // Assurez-vous que votre API Next.js est correctement configurée
+  const URL = "http://localhost:3000/api/auth";
   const options = {
     method: "POST",
     headers: {
