@@ -12,8 +12,10 @@ export default function User() {
 
   return (
     <>
+      {user && <Link href="/newtemplate" className={styles.lnk}>Nouveau template</Link>}
+      {user && <Link href="/collection" className={styles.lnk}>Ma collection</Link>}
       {user && <Link href="/profile" className={styles.lnk}>Profile</Link>}
-      {!user && <Link href="/register" className={styles.lnk}>Se connecter</Link>}
+      {!user && <Link href="/register" className={styles.lnk}>S'enregistrer / Se connecter</Link>}
     </>
   );
 }
