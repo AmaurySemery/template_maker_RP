@@ -183,3 +183,8 @@ a {
 .ok {
   color: green;
 }
+
+.image-accueil {
+  width: 40%;
+  height: auto;
+}
