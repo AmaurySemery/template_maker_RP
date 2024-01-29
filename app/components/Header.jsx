@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styles from './Header.module.css'
+import User from "./User";
 
 export default function Header() {
     return (
@@ -13,7 +14,7 @@ export default function Header() {
                     <Link href="/market" className={styles.lnk}>Boutique</Link>
                     <Link href="/newtemplate" className={styles.lnk}>Nouveau template</Link>
                     <Link href="/collection" className={styles.lnk}>Ma collection</Link>
-                    <Link href="/register" className={styles.lnk}>S'enregistrer</Link>
+                    <User />
                 </div>
             </nav>
         </header>
