@@ -4,9 +4,8 @@ import styles from "./page.module.css";
 export default function Home() {
   return (
     <main className={styles.main}>
-      <h3>RP Template maker</h3>
-      <p>Facilite toi la vie en intégrant tes RP dans tes <Link href="/collection" >templates</Link> quali'</p>
-      <img class="image-accueil" src="https://i.pinimg.com/originals/7b/df/16/7bdf164aaed98d4336084d0b33e3e588.gif" alt="Accueil"></img>
+      <p>Marre de galérer à enfiler tes <Link href="/collection" >templates</Link> ?</p>
+      <img class="image-accueil" src="https://media1.giphy.com/media/xT5LMsC6iydeziO6nC/200.gif?cid=82a1493baynkr03fjtz56mng389rr1aakwxo642wx8sdxqoz&ep=v1_gifs_search&rid=200.gif&ct=g" alt="Accueil"></img>
     </main>
   );
 }

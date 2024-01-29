@@ -187,4 +187,7 @@ a {
 .image-accueil {
   width: 40%;
   height: auto;
+  border-radius: 50%;
+  margin-top: 20px;
+  border: solid 4px rgb(86, 10, 68);
 }
